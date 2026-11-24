@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203f32">
+  <meta name="description" content="Jelajahi gagasan program, baca kabar lokal, dan susun usulan untuk pengembangan Desa Kutasari, Baturraden.">
+  <title>Ruang Desa Kutasari · Baturraden</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Ikon yang digunakan pada logo, menu, dan tombol. -->
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="land" viewBox="0 0 48 48">
+      <rect x="1" y="1" width="46" height="46" rx="10" fill="#264938"/>
+      <g stroke="#f7e9bb" stroke-width="1.65" stroke-linecap="round"
+         stroke-linejoin="round" fill="none">
+        <path d="m7 28 12-16 7 9 4-6 11 13M15 18l4 1 2.5-2M7 31c10-5 18-4 34 1M9 36c11-6 18-6 31-3M16 39c7-5 14-7 23-6M26 40c5-4 8-6 13-6"/>
+        <circle cx="32" cy="10" r="2.4" fill="#e7bf68" stroke="none"/>
+      </g>
+    </symbol>
+    <symbol id="arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15m-6-6 6 6-6 6"/>
+    </symbol>
+    <symbol id="up-right" viewBox="0 0 24 24">
+      <path d="M6 18 18 6M6 6h12v12"/>
+    </symbol>
+    <symbol id="pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/>
+      <circle cx="12" cy="10" r="2.6"/>
+    </symbol>
+    <symbol id="chat" viewBox="0 0 24 24">
+      <path d="M20 15a3 3 0 0 1-3 3h-6l-6 3v-4a3 3 0 0 1-2-3V7a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3z"/>
+      <path d="M7 9h9M7 13h6"/>
+    </symbol>
+    <symbol id="menu" viewBox="0 0 24 24">
+      <path d="M3 7h18M3 12h18M3 17h18"/>
+    </symbol>
+    <symbol id="close" viewBox="0 0 24 24">
+      <path d="m5 5 14 14M19 5 5 19"/>
+    </symbol>
+    <symbol id="down" viewBox="0 0 24 24">
+      <path d="M12 4v15m-6-6 6 6 6-6"/>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#utama">Langsung ke isi</a>
+
+  <header class="masthead">
+    <div class="container header-inner">
+      <a class="brand" href="#beranda" aria-label="Desa Kutasari, beranda">
+        <svg class="logo" aria-hidden="true"><use href="#land"/></svg>
+        <span>
+          <strong>Desa Kutasari</strong>
+          <small>Baturraden, Banyumas</small>
+        </span>
+      </a>
+
+      <nav id="navigasi" aria-label="Navigasi utama">
+        <a href="#beranda" aria-current="location">Beranda</a>
+        <a href="#program">Program Desa</a>
+        <a href="#kabar">Kabar Desa</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn-green" data-usulan>
+          <svg class="icon"><use href="#chat"/></svg>
+          Usulan Warga
+        </button>
+        <button type="button" id="menu-toggle" class="icon-btn"
+                aria-controls="navigasi" aria-expanded="false" aria-label="Buka menu">
+          <svg class="icon"><use href="#menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="utama">
+    <!-- Beranda -->
+    <section id="beranda" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow hero-label"><span></span>Ruang pengembangan desa</p>
+          <h1 id="hero-title">Desa Kutasari<span>.</span></h1>
+          <p class="hero-lead">
+            Jelajahi potensi desa, ikuti kabar pembangunan, dan bagikan gagasan
+            untuk masa depan Kutasari.
+          </p>
+          <a class="btn btn-gold" href="#program">
+            Jelajahi Program <svg class="icon"><use href="#arrow"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-footer">
+          <span class="location">
+            <svg class="icon"><use href="#pin"/></svg>
+            Baturraden, Banyumas, Jawa Tengah
+          </span>
+          <a href="#program" class="scroll-link" aria-label="Gulir ke program desa">
+            <svg class="icon"><use href="#down"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program desa -->
+    <section id="program" class="section container" aria-labelledby="program-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow"><span></span>Potensi &amp; inisiatif</p>
+          <h2 id="program-title">Program desa</h2>
+        </div>
+        <p>Tiga contoh gagasan yang bisa dikembangkan bersama warga Kutasari.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <img src="aset/pertanian.webp" alt="Ilustrasi petani di tengah sawah hijau"
+               width="512" height="512">
+          <div class="card-body">
+            <p class="category"><i></i>Pertanian</p>
+            <h3>Kebun pangan warga</h3>
+            <p>Manfaatkan pekarangan untuk menanam sayuran bersama tetangga.</p>
+            <button type="button" class="card-link" data-program="kebun"
+                    aria-label="Lihat gagasan kebun pangan warga">
+              Lihat gagasan <svg class="icon"><use href="#arrow"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="aset/kerajinan.webp" alt="Ilustrasi tangan perajin menganyam bambu"
+               width="512" height="512">
+          <div class="card-body">
+            <p class="category"><i></i>Ekonomi lokal</p>
+            <h3>Etalase produk desa</h3>
+            <p>Bantu pelaku usaha memperkenalkan produk dan menerima pesanan.</p>
+            <button type="button" class="card-link" data-program="etalase"
+                    aria-label="Lihat gagasan etalase produk desa">
+              Lihat gagasan <svg class="icon"><use href="#arrow"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="aset/jalan.webp" alt="Ilustrasi jalan kecil di antara rumah dan kebun"
+               width="512" height="512">
+          <div class="card-body">
+            <p class="category"><i></i>Lingkungan</p>
+            <h3>Jalur desa terawat</h3>
+            <p>Petakan jalan dan saluran air yang perlu dirawat lewat kerja bakti.</p>
+            <button type="button" class="card-link" data-program="jalur"
+                    aria-label="Lihat gagasan jalur desa terawat">
+              Lihat gagasan <svg class="icon"><use href="#arrow"/></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Tambahkan atau ubah tautan berita di bagian ini. -->
+    <section id="kabar" class="news-section" aria-labelledby="news-title">
+      <div class="container news-grid">
+        <div>
+          <p class="eyebrow"><span></span>Berita lokal</p>
+          <h2 id="news-title">Kabar desa</h2>
+          <p class="muted">Bacaan seputar pembangunan di Kutasari.</p>
+        </div>
+
+        <div class="news-list">
+          <a href="https://rri.co.id/purwokerto/regional/2550521/perbaikan-rampung-jalan-prompong-ketenger-banyumas-kembali-dibuka"
+             target="_blank" rel="noopener noreferrer">
+            <span>
+              <small>7 Juli 2026 · RRI Purwokerto</small>
+              <strong>Jalan Prompong–Ketenger dibuka kembali setelah perbaikan</strong>
+            </span>
+            <svg class="icon"><use href="#up-right"/></svg>
+          </a>
+          <a href="https://sda.pu.go.id/balai/bbwsserayuopak/berita/sosialisasi-peningkatan-jaringan-irigasi-di-kab-banyumas-inpres-no-2-tahun-2025-tahap-3"
+             target="_blank" rel="noopener noreferrer">
+            <span>
+              <small>2025 · BBWS Serayu Opak</small>
+              <strong>Kutasari masuk cakupan peningkatan jaringan irigasi Demong</strong>
+            </span>
+            <svg class="icon"><use href="#up-right"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="participate container" aria-labelledby="usulan-title">
+      <div>
+        <p class="eyebrow"><span></span>Usulan warga</p>
+        <h2 id="usulan-title">Apa yang perlu dibenahi?</h2>
+        <p>Susun gagasanmu sebagai draf untuk dibawa ke pertemuan warga.</p>
+      </div>
+      <button type="button" class="btn btn-green" data-usulan>
+        Tulis usulan <svg class="icon"><use href="#arrow"/></svg>
+      </button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>Ruang Desa Kutasari · Prototipe dengan gambar ilustrasi</span>
+      <a href="https://kutasari-baturraden.desa.id/" target="_blank" rel="noopener noreferrer">
+        Situs resmi desa <svg class="icon"><use href="#up-right"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Rincian program diisi oleh script.js ketika tombol diklik. -->
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="dialog-inner">
+      <button type="button" class="icon-btn dialog-close" aria-label="Tutup detail">
+        <svg class="icon"><use href="#close"/></svg>
+      </button>
+      <p class="eyebrow"><span></span>Contoh gagasan</p>
+      <h2 id="detail-title"></h2>
+      <p id="detail-desc"></p>
+      <h3>Langkah awal</h3>
+      <ol id="detail-steps"></ol>
+      <button type="button" class="btn btn-green" id="usulan-terkait">
+        Tulis usulan terkait <svg class="icon"><use href="#arrow"/></svg>
+      </button>
+    </div>
+  </dialog>
+
+  <dialog id="usulan" aria-labelledby="draft-title">
+    <div class="dialog-inner">
+      <button type="button" class="icon-btn dialog-close" aria-label="Tutup formulir">
+        <svg class="icon"><use href="#close"/></svg>
+      </button>
+      <p class="eyebrow"><span></span>Partisipasi warga</p>
+      <h2 id="draft-title">Draf usulan warga</h2>
+      <p>Simpan satu draf di browser ini atau unduh salinannya untuk dibagikan sendiri.</p>
+
+      <form id="draft-form">
+        <label for="topik">Bidang usulan</label>
+        <select id="topik" name="topik">
+          <option>Pertanian</option>
+          <option>Ekonomi lokal</option>
+          <option>Lingkungan</option>
+          <option>Lainnya</option>
+        </select>
+
+        <label for="gagasan">Usulanmu</label>
+        <textarea id="gagasan" name="gagasan" rows="4" maxlength="2000" required
+                  placeholder="Apa yang perlu dilakukan, di mana, dan siapa yang akan terbantu?"></textarea>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-green">Simpan draf</button>
+          <button type="button" class="btn btn-line" id="unduh">Unduh .txt</button>
+        </div>
+        <p id="pesan" role="status"></p>
+      </form>
+    </div>
+  </dialog>
+</body>
+</html>
